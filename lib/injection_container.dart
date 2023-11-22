@@ -1,3 +1,4 @@
+import 'package:gestion_post/core/network/network_info.dart';
 import 'package:gestion_post/features/post/data/datasources/post_local_data_source.dart';
 import 'package:gestion_post/features/post/data/datasources/post_remote_data_source.dart';
 import 'package:gestion_post/features/post/data/repositories/post_repository_impl.dart';
@@ -42,7 +43,7 @@ Future<void> init() async {
 
 //! Core
 
-  // sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
+  sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
 
 //! External
 
